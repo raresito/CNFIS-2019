@@ -12,7 +12,7 @@ testUni = new_list[0]
 oneUniList = testUni.split(" ")
 print(oneUniList)
 finalDictionary = []
-index = 0;
+index = 0
 for oneUniList in new_list:
     oneUniList = oneUniList.split(" ")
     name = ''
@@ -27,7 +27,7 @@ for oneUniList in new_list:
     else:
         id = 'U0' + str(j)
     model_uni = {
-        'id':id,
+        'id': id,
         'id_num': j,
         'total_students': int(oneUniList[len(oneUniList) - 12].replace('.', '')),
         'buget_students': int(oneUniList[len(oneUniList) - 11].replace('.', '')),
@@ -44,10 +44,10 @@ for oneUniList in new_list:
     }
     i = 13
     while i < len(oneUniList):
-        name = oneUniList[len(oneUniList) - i] + ' ' + name;
+        name = oneUniList[len(oneUniList) - i] + ' ' + name
         i = i + 1
     model_uni['name'] = name
-    finalDictionary.append(model_uni);
-    index = index + 1;
+    finalDictionary.append(model_uni)
+    index = index + 1
 
-print(finalDictionary);
+print(finalDictionary)
